@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Paws R Us (SA)</title>
+  <meta name="description" content="Contact Paws R Us (SA) - find our Midrand shelter and Fourways community locations, phone, and email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Paws R Us <span>(SA)</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Available Dogs</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch</h1>
+    </section>
+
+    <section class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:info@pawsrus-sa.co.za">info@pawsrus-sa.co.za</a></p>
+      <p><strong>WhatsApp / Phone:</strong> 083 518 0447 (messaging line only)</p>
+    </section>
+
+    <section class="locations">
+      <h2>Our locations</h2>
+      <div class="location-grid">
+        <article class="location-card">
+          <h3>Shelter site &mdash; Midrand</h3>
+          <p>Cadeau Kennels, 22 Summit Road, Midrand, Johannesburg</p>
+        </article>
+        <article class="location-card">
+          <h3>Community area &mdash; Fourways</h3>
+          <p>BF Kennels &amp; Cattery, View Road, off Porcupine Park Avenue, Riversands, Fourways</p>
+        </article>
+      </div>
+
+      <!--
+        Google Maps embed showing both locations.
+        To be finalised with an actual embedded map iframe in Part 3
+        (external service integration).
+      -->
+      <div class="map-placeholder">
+        <p>[ Map showing Midrand shelter and Fourways community area to be embedded here in Part 3 ]</p>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Send us a message</h2>
+      <form action="#" method="post" class="site-form">
+
+        <label for="c-fullname">Full name</label>
+        <input type="text" id="c-fullname" name="fullname" required>
+
+        <label for="c-email">Email address</label>
+        <input type="email" id="c-email" name="email" required>
+
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5"></textarea>
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Paws R Us (SA) | PRU Canine Rescue and Re-home NPC</p>
+    <p>Midrand &amp; Fourways, Gauteng, South Africa</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
