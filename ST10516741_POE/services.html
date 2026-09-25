@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Dogs | Paws R Us (SA)</title>
+  <meta name="description" content="Browse dogs currently available for adoption from Paws R Us (SA) in Gauteng. All dogs are sterilised, vaccinated, and microchipped.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">Paws R Us <span>(SA)</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html" class="active">Available Dogs</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-intro">
+      <p class="eyebrow">Adoption</p>
+      <h1>Available dogs</h1>
+      <p class="page-lead">
+        All dogs in our care are sterilised, vaccinated, and microchipped before
+        adoption. Browse a few of the dogs currently waiting for their forever homes
+        below, and get in touch via our <a href="enquiry.html">enquiry form</a> if
+        you'd like to meet one of them.
+      </p>
+    </section>
+
+    <!--
+      Filter bar: static markup only for Part 2.
+      Filtering logic (showing/hiding cards by data-age / data-size on click)
+      will be implemented in Part 3 via js/main.js.
+    -->
+    <section class="filter-bar" aria-label="Filter available dogs">
+      <button type="button" class="filter-btn active" data-filter="all">All Dogs</button>
+      <button type="button" class="filter-btn" data-filter="puppy">Puppies</button>
+      <button type="button" class="filter-btn" data-filter="young-adult">Young Adults</button>
+      <button type="button" class="filter-btn" data-filter="adult">Adults</button>
+      <button type="button" class="filter-btn" data-filter="senior">Seniors</button>
+    </section>
+
+    <section class="dog-gallery">
+
+      <article class="dog-card" data-age="adult">
+        <span class="status-badge status-available">Available</span>
+        <a href="images/Stryker.jpg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Stryker.jpg" alt="Photo of Stryker, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Nala</h3>
+          <p class="dog-meta">Adult &middot; Mixed breed &middot; Affectionate</p>
+          <p>Nala loves belly rubs and gets along well with other dogs. She'd thrive in a home with a garden to explore.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+      <article class="dog-card" data-age="senior">
+        <span class="status-badge status-available">Available</span>
+        <a href="images/Jackie.jpeg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Jackie.jpeg" alt="Photo of Jackie, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Jackie</h3>
+          <p class="dog-meta">Senior &middot; Mixed breed &middot; Gentle</p>
+          <p>Jackie is a senior dog who has been waiting a long time for a quiet, loving home.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+      <article class="dog-card" data-age="puppy">
+        <span class="status-badge status-pending">Pending Adoption</span>
+        <a href="images/Buddy.jpg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Buddy.jpg" alt="Photo of Buddy, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Buddy</h3>
+          <p class="dog-meta">Puppy &middot; Mixed breed &middot; Playful</p>
+          <p>Buddy is full of energy and would do best in an active home with a secure yard.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+      <article class="dog-card" data-age="young-adult">
+        <span class="status-badge status-available">Available</span>
+        <a href="images/Nala.jpg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Nala.jpg" alt="Photo of Nala, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Stryker</h3>
+          <p class="dog-meta">Young adult &middot; Mixed breed &middot; Loyal</p>
+          <p>Stryker has been through a difficult time and is looking for a foster or forever home where he can learn to trust again.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+      <article class="dog-card" data-age="adult">
+        <span class="status-badge status-available">Available</span>
+        <a href="images/Rocky.jpg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Rocky.jpg" alt="Photo of Rocky, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Rocky</h3>
+          <p class="dog-meta">Adult &middot; Boerboel mix &middot; Protective, gentle</p>
+          <p>Rocky is a big softie once he gets to know you. He's well-behaved on a leash and would suit an experienced dog owner.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+      <article class="dog-card" data-age="puppy">
+        <span class="status-badge status-available">Available</span>
+        <a href="images/Coco.jpg" target="_blank" rel="noopener" class="dog-card-image">
+          <img src="images/Coco.jpg" alt="Photo of Coco, a rescue dog available for adoption">
+        </a>
+        <div class="dog-card-body">
+          <h3>Coco</h3>
+          <p class="dog-meta">Puppy &middot; Mixed breed &middot; Curious, social</p>
+          <p>Coco is still learning about the world and would benefit from a home ready to help with basic training.</p>
+          <a href="enquiry.html" class="btn btn-primary btn-small">Adopt Me</a>
+        </div>
+      </article>
+
+    </section>
+
+    <!--
+      Recently adopted / success stories section.
+      Builds trust and emotional connection — common on real shelter sites.
+    -->
+    <section class="success-section">
+      <h2>Happy Tails 🐾</h2>
+      <p class="page-lead">A few of our recent success stories.</p>
+
+      <div class="success-grid">
+        <article class="success-card">
+          <img src="images/Milo.jpeg" alt="Photo of Milo, adopted from Paws R Us (SA)">
+          <h3>Milo</h3>
+          <p>Adopted in March — now living his best life on a farm in Muldersdrift.</p>
+        </article>
+
+        <article class="success-card">
+          <img src="images/Bella.jpg" alt="Photo of Bella, adopted from Paws R Us (SA)">
+          <h3>Bella</h3>
+          <p>Found her forever family in Fourways after 8 months in foster care.</p>
+        </article>
+
+        <article class="success-card">
+          <img src="images/Max.jpg" alt="Photo of Max, adopted from Paws R Us (SA)">
+          <h3>Max</h3>
+          <p>Adopted by a Midrand family — he now has two kids and a garden to play in.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Paws R Us (SA) | PRU Canine Rescue and Re-home NPC</p>
+    <p>Midrand &amp; Fourways, Gauteng, South Africa</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
