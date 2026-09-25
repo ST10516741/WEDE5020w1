@@ -124,19 +124,19 @@ embedded map on the Contact page, and SEO improvements.
 ### Mobile
 <p align="center">
   <strong>IPhone 14 pro max</strong><br/>
-<img width="644" height="1414" alt="iphone-14-pro-max" src="https://github.com/user-attachments/assets/3cdc9ea0-4c77-4648-ae72-293d3da94811" />
+<img width="644" height="1414" alt="iphone-14-pro-max" src="https://github.com/user-attachments/assets/0904eb9a-850a-4937-b58b-bb59ebb72b2b" />
 </p>
 ### Tablet
 <table>
   <tr>
     <td align="center">
       <strong>IPad mini</strong><br/>
-    <img width="1073" height="1414" alt="ipad-mini" src="https://github.com/user-attachments/assets/95dcb383-0649-4532-ae9a-487fcda1930f" />
+    <img width="1073" height="1414" alt="ipad-mini" src="https://github.com/user-attachments/assets/1c9920ac-0f99-407a-820f-004fb9ed9af7" />
   </tr>
   <tr>
     <td align="center">
       <strong>IPad Pro</strong><br/>
-     <img width="1080" height="1397" alt="ipad-pro" src="https://github.com/user-attachments/assets/231c4dc3-71b4-4333-947d-fa4613582e14" />
+     <img width="1080" height="1397" alt="ipad-pro" src="https://github.com/user-attachments/assets/82fc8e7d-017c-4a48-af9d-e1c5680220ff" />
   </tr>
 </table>
 
@@ -145,12 +145,12 @@ embedded map on the Contact page, and SEO improvements.
   <tr>
     <td align="center">
       <strong>IMac</strong><br/>
-      <img width="1079" height="634" alt="imac" src="https://github.com/user-attachments/assets/17b18ce3-4f21-466f-b25e-e76e878d341f" />
+     <img width="1079" height="634" alt="imac" src="https://github.com/user-attachments/assets/50982f70-45cc-475e-b656-eed0c531f0bf" />
   </tr>
   <tr>
     <td align="center">
       <strong>MacBook Pro</strong><br/>
-     <img width="1080" height="678" alt="macbook-pro" src="https://github.com/user-attachments/assets/70c184c7-8fc5-4beb-959b-8fbd2dcf93a4" />
+   <img width="1080" height="678" alt="macbook-pro" src="https://github.com/user-attachments/assets/66f61bd0-e232-46a1-9986-45be430becc9" />
   </tr>
 </table>
 
