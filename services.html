@@ -164,6 +164,20 @@
       </div>
     </section>
 
+    <!--
+      Lightbox overlay for thedog galllery.
+      Hidden by default,shown and populated through main.js when a dog
+      card's photo is clicked. The close button and Escape key both dismiss it.
+    -->
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Enlarged dog photo">
+      <button type="button" class="lightbox-close" aria-label="Close enlarged photo">&times;</button>
+      <button type="button" class="lightbox-prev" aria-label="Previous dog photo">&#10094;</button>
+      <img src="" alt="" class="lightbox-image">
+      <button type="button" class="lightbox-next" aria-label="Next dog photo">&#10095;</button>
+      <p class="lightbox-caption"></p>
+    </div>
+
   </main>
 
   <footer class="site-footer">

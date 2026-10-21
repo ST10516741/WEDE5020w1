@@ -819,3 +819,93 @@ p {
   height: 0;
   overflow: hidden;
 }
+
+/* ---------- Lightbox (Available Dogs page) ---------- */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(74, 58, 61, 0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.lightbox.lightbox-open {
+  display: flex;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: var(--radius-md);
+  border: 6px solid #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background-color: #fff;
+  color: var(--color-plum);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background-color: var(--color-hotpink);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.lightbox-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.lightbox-prev {
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next {
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev,
+  .lightbox-next {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.1rem;
+  }
+}
