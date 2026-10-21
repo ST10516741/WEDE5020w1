@@ -64,20 +64,30 @@
 
     <section class="form-section">
       <h2>Send us a message</h2>
-      <form action="#" method="post" class="site-form">
+      <form action="#" method="post" class="site-form" id="contact-form" novalidate>
 
         <label for="c-fullname">Full name</label>
-        <input type="text" id="c-fullname" name="fullname" required>
+        <input type="text" id="c-fullname" name="fullname" required minlength="2">
+        <p class="form-error" id="c-fullname-error" role="alert"></p>
 
         <label for="c-email">Email address</label>
         <input type="email" id="c-email" name="email" required>
+        <p class="form-error" id="c-email-error" role="alert"></p>
 
         <label for="c-message">Message</label>
-        <textarea id="c-message" name="message" rows="5"></textarea>
+        <textarea id="c-message" name="message" rows="5" minlength="10" required></textarea>
+        <p class="form-error" id="c-message-error" role="alert"></p>
 
         <button type="submit" class="btn btn-primary">Send message</button>
 
       </form>
+
+      <!--
+        Response shown after a valid submission: compiles the input into
+        a pre-filled mailto link the visitor can click to actually send
+        the email via their own email client. Hidden by default.
+      -->
+      <div class="form-response" id="contact-response" aria-live="polite" hidden></div>
     </section>
 
   </main>
@@ -90,3 +100,4 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+

@@ -909,3 +909,28 @@ p {
     font-size: 1.1rem;
   }
 }
+
+/* ---------- Form Validation & Response ---------- */
+.form-error {
+  color: var(--color-hotpink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: -0.6rem;
+  min-height: 1.1rem;
+}
+
+.field-invalid {
+  border-color: var(--color-hotpink) !important;
+}
+
+.form-response {
+  margin-top: 1.5rem;
+  background-color: var(--color-mint);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  color: var(--color-plum);
+}
+
+.form-response .btn {
+  margin-top: 0.75rem;
+}
