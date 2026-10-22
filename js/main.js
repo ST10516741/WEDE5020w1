@@ -196,11 +196,8 @@ function validateSelect(select, errorElement, label) {
   return true;
 }
 
-// --------------------------------------------------------------------------
 // Enquiry Form (enquiry.html)
-// --------------------------------------------------------------------------
-// Validates input client-side, then - since there is no live backend -
-// simulates a server response tailored to the enquiry type selected,
+// Validates input client-side, but since there is no live backend, it simulates a server response tailored to the enquiry type selected,
 // giving the visitor relevant info on cost, availability, or next steps.
 (function initEnquiryForm() {
   const form = document.getElementById('enquiry-form');
@@ -248,11 +245,9 @@ function validateSelect(select, errorElement, label) {
   });
 })();
 
-// --------------------------------------------------------------------------
+
 // Contact Form (contact.html)
-// --------------------------------------------------------------------------
-// Validates input client-side, then compiles it into a pre-filled mailto
-// link so the visitor can send the message as a real email from their own
+// Validates input client-side, and link so the visitor can send the message as a real email from their own 
 // email client (there is no backend to send it automatically).
 (function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -297,4 +292,48 @@ function validateSelect(select, errorElement, label) {
   });
 })();
 
+// Interactive Locations Map (Contact page)
+// Uses Leaflet (loaded via CDN in contact.html) to show both Paws R Us (SA), shows locations with markers and popups.
+// suburb-level positions for Midrand and Fourways, Gauteng.
+(function initLocationsMap() {
+  const mapContainer = document.getElementById('locations-map');
+
+  // Only run on the Contact page, and only if Leaflet actually loaded
+  // (e.g. skip gracefully if the visitor is offline and the CDN failed).
+  if (!mapContainer || typeof L === 'undefined') {
+    return;
+  }
+
+  const locations = [
+    {
+      name: 'Shelter site — Midrand',
+      address: 'Cadeau Kennels, 22 Summit Road, Midrand, Johannesburg',
+      lat: -25.9992,
+      lng: 28.1264
+    },
+    {
+      name: 'Community area — Fourways',
+      address: 'BF Kennels & Cattery, View Road, Riversands, Fourways',
+      lat: -25.9894,
+      lng: 28.0096
+    }
+  ];
+
+  // Centre the map between both locations
+  const centerLat = (locations[0].lat + locations[1].lat) / 2;
+  const centerLng = (locations[0].lng + locations[1].lng) / 2;
+
+  const map = L.map('locations-map').setView([centerLat, centerLng], 11);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18
+  }).addTo(map);
+
+  locations.forEach(function (location) {
+    L.marker([location.lat, location.lng])
+      .addTo(map)
+      .bindPopup('<strong>' + location.name + '</strong><br>' + location.address);
+  });
+})();
 

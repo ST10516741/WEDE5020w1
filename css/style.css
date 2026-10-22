@@ -934,3 +934,16 @@ p {
 .form-response .btn {
   margin-top: 0.75rem;
 }
+
+.locations-map {
+  margin-top: 1.5rem;
+  height: 400px;
+  border-radius: var(--radius-md);
+  border: 3px dashed var(--color-hotpink);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .locations-map {
+    height: 300px;
+  }
