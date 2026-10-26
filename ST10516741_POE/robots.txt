@@ -1,0 +1,8 @@
+# robots.txt for Paws R Us (SA)
+# Controls which pages search engine crawlers may index.
+
+User-agent: *
+Allow: /
+
+# Sitemap location (update the domain below once the site is deployed)
+Sitemap:https://paws-r-us-sa.netlify.app
