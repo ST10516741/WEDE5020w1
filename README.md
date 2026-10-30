@@ -169,3 +169,41 @@ https://www.instagram.com/pawsrus_sa/
 https://www.facebook.com/PawsRUS.SA/photos/1086218523529108/
 https://pets24.co.za/services/listing/paws-r-us-sa-2/
 Unsplash, n.d. [Search term used]. [Online]. Available at: https://unsplash.com [Accessed on [22/09/2026}
+Leaflet, n.d. Leaflet: an open-source JavaScript library for interactive maps. [Online] Available at: https://leafletjs.com [21/10/2026].
+OpenStreetMap contributors, n.d. OpenStreetMap. [Online] Available at: https://www.openstreetmap.org [22/10/2026].
+Netlify, n.d. Netlify. [Online] Available at: https://www.netlify.com [22/10/2026].
+
+
+## Off-Page SEO Strategy
+
+Off-page SEO covers the signals that build a site's visibility and trust
+beyond its own code. As Paws R Us (SA) is a local non-profit, the plan
+below focuses on low-cost, realistic actions.
+
+### Backlinks
+- Update the website link on the organisation's existing online listings
+  (Adopt A Pet, the SPCA International shelter list, and the Facebook
+  page) to point to the live site.
+- Ask local businesses in Midrand and Fourways (vet clinics, pet shops,
+  kennels) to link to the Available Dogs page.
+- Share adoption success stories with local community news outlets,
+  linking back to the Happy Tails section.
+
+### Social Media
+- Use the existing Facebook page as the main promotion channel, posting
+  each newly available dog with a link to the Available Dogs page.
+- Keep the organisation's name, description and website link consistent
+  across every platform.
+- Open Graph tags (added to the Home, About and Enquire pages) make
+  shared links display a proper title and description.
+
+### Local SEO
+- Create a Google Business Profile for the Midrand shelter and the
+  Fourways community location.
+- Keep the organisation's name, address and phone number identical across
+  the website, directories and social profiles.
+- Use location phrases such as "dog adoption in Midrand" and "dog rescue
+  in Fourways" naturally in page copy.
+- The Contact page map shows both locations
+
+
