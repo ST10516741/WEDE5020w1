@@ -1,21 +1,21 @@
 # Paws R Us (SA) Website
 **By ST10516741**
+**Live site:** https://paws-r-us-sa.netlify.app
 ## Project Overview
 This project involves the development of a website for Paws R Us (SA), a registered non-profit dog rescue and
-re-homing organisation operating in Gauteng, South Africa. The website serves as the digital presence for the
-organisation, which rescues, shelters, and re-homes abandoned and surrendered dogs, with a shelter facility in
-Midrand and a community presence in Fourways.
-The Paws R Us (SA) website development project follows a three-part Portfolio of Evidence structure for the
-Web Development5020w module, with each part building upon the previous foundation.
-The development of this website addresses the organisation's lack of a functioning online presence — their
-previous website is defunct, leaving Facebook as their only digital point of contact. Research into the
-organisation confirmed a genuine need for a proper adoption platform where prospective adopters, fosters,
-volunteers, and donors can learn about the organisation and get in touch.
-The website showcases Paws R Us (SA)'s commitment to rescuing and re-homing vulnerable dogs across
-Gauteng, while providing a warm, approachable, and easy-to-navigate platform that reflects the emotional,
-community-driven nature of animal rescue work.
+re-homing organisation operating in Gauteng, South Africa. The organisation rescues, shelters, and re-homes
+abandoned and surrendered dogs, with a shelter site in Midrand and a community presence in Fourways.
+The website was built as a three-part Portfolio of Evidence for the WEDE5020 module, with each part building
+on the previous one: Part 1 (planning and HTML structure), Part 2 (CSS styling and responsive design) and Part 3
+(JavaScript functionality, SEO and deployment).
+The organisation's own website is no longer active, which leaves Facebook and third-party directory listings as its
+only online presence. This website gives prospective adopters, fosters, volunteers and donors a single place to
+learn about the organisation, meet the dogs and get in touch.
+
 ## Website Goals and Objectives
+
 ### Primary Goals
+
 The website has been designed to achieve several key organisational objectives:
 - **Dog Visibility**: Prospective adopters can browse dogs currently available for adoption, complete with
 photos, temperament notes, and status (Available / Pending Adoption), without needing to contact the shelter
@@ -62,7 +62,7 @@ locations (Midrand shelter and Fourways community area), and a general contact f
 **Mobile Responsiveness**: The website adapts across desktop, tablet, and mobile screen sizes using two
 breakpoints (1024px and 768px), with multi-column layouts collapsing to single-column stacks on smaller
 screens.
-**Dog Filtering (planned for Part 3)**: A static filter bar is in place on the Available Dogs page (All / Puppies /
+**Dog Filtering**: A static filter bar is in place on the Available Dogs page (All / Puppies /
 Young Adults / Adults / Seniors); the interactive filtering logic will be implemented in Part 3 using JavaScript.
 **Form Handling**: Enquiry and Contact forms use HTML5 validation attributes (`required`, `type="email"`, etc.)
 to catch basic input errors before submission.
@@ -83,12 +83,14 @@ The content strategy emphasises the emotional, trust-building nature of animal r
 approachable language and imagery — while maintaining a clear, easy-to-navigate structure that supports the
 organisation's practical goal of increasing adoptions and enquiries.
 ## Development Timeline
+
 ### Part 1: Foundation
 **Duration**: 31/06/2026 – 14/08/2026
 The initial phase focused on establishing the groundwork for the project: researching the organisation, drafting
 and submitting the project proposal, creating the sitemap, and building the semantic HTML structure for all five
 pages (index, about, services, enquiry, contact), including basic form scaffolding with HTML5 validation
 attributes.
+
 ### Part 2: Visual Design and Responsive Development
 
 **Duration**: 12/09/2026 – 25/09/2026
@@ -114,11 +116,102 @@ linking to the enquiry form, and a "Happy Tails" success stories section
 - Refined image handling on dog cards (`object-position: center`) so photos crop correctly within their frames
 - Iteratively adjusted colour, spacing, and card styling for visual consistency across sections, based on ongoing
 visual review
-### Part 3: Functionality *(planned)*
-**Duration**: pending
-Planned scope: implementing the dog-filtering system in JavaScript, form validation and submission handling, an
-embedded map on the Contact page, and SEO improvements.
 
+### Part 3: Functionality, SEO and Deployment
+
+**Duration**: [20/10/2026 - 31/10/2026]
+Added the dog filter, photo lightbox, form validation with tailored responses, the interactive map, `robots.txt` and
+`sitemap.xml`, on-page SEO improvements and performance/security changes, then deployed the site to Netlify.
+### Working through Feedback from Part 2
+Part 2 received 93/100. The overall comment was that the work showed good understanding of web
+development. In the rubric, the marks I lost were mainly on how detailed the README and changelog were, so I
+made these changes:
+- Moved the version history into its own `CHANGELOG.md`, with dated entries grouped under Added, Changed
+and Fixed.
+- Expanded the README with the goals, audience, features, technical implementation, SEO strategy, timeline,
+known limitations and an updated reference list.
+- Recorded every Part 3 change in the changelog in enough detail for each edit to be traced.
+- **Dog filter**: Buttons for All / Puppies / Young Adults / Adults / Seniors show or hide dog cards using each
+card's `data-age` attribute. The active button is updated visually and with `aria-pressed`.
+- **Photo lightbox**: Clicking a dog's photo opens it in an in-page overlay with previous/next buttons, a close
+button, click-outside-to-close, and keyboard support (Escape, Left and Right arrows). The photo links remain as
+a fallback when JavaScript is off.
+- **Form validation**: Custom JavaScript validates name length, email format, South African phone format
+(enquiry form only), dropdown selection and minimum message length. Field-specific error messages appear
+under each field and invalid fields get a highlighted border. Both forms submit without a page reload.
+- **Enquiry response**: After validation, the visitor sees a response specific to their enquiry type (adopt, foster,
+volunteer, sponsor) covering costs and next steps.
+- **Contact email**: After validation, the visitor gets a "Send Email" button that opens their email app with the
+recipient, subject and message already filled in (`mailto:` link).
+- **Interactive map**: A Leaflet map shows both locations with markers and popups.
+- **Search engine files**: `robots.txt` and `sitemap.xml` (all five pages).
+### Core Design
+- **Responsive design**: Two breakpoints (1024px tablet, 768px mobile). Multi-column layouts collapse to single
+columns and the navigation reflows on small screens.
+- **Visual design**: Pink, peach and mint palette, rounded cards and pill buttons, hover/focus/active states, and
+gentle animations that respect `prefers-reduced-motion`.
+
+## Technical Implementation
+The site uses HTML5 (semantic elements), CSS3 (custom properties, Grid, Flexbox, media queries) and vanilla
+JavaScript with no frameworks. The map uses Leaflet 1.9.4 (loaded from unpkg with integrity hashes) and
+OpenStreetMap tiles. The code was written in VS Code, versioned with Git and GitHub, and is deployed on
+Netlify (free tier, served over HTTPS).
+### Colour palette
+| Colour | Hex | Use |
+|---|---|---|
+| Hot pink | #FF6FA5 | Buttons, links, accents |
+| Pink | #FFB3C6 | Section and card backgrounds |
+| Blush | #FFE1EC | Soft backgrounds |
+| Peach | #FFD3B0 | Accent blocks |
+| Mint | #C4F1E0 | Accent blocks, form response |
+| Plum | #7A2E4D | Headings, high-contrast text |
+| Charcoal | #4A3A3D | Body text |
+### Typography
+'Baloo 2' for headings and 'Figtree' for body text, both from Google Fonts.
+## Content Strategy
+Content was developed from research into the real organisation using its public Facebook page and directory
+listings, because its own website is inactive. Copy is warm and approachable to reflect the emotional side of
+rescue work, with clear calls to action. Photos are licensed stock photography; typography is from Google Fonts.
+## Search Engine Optimisation
+### On-page SEO
+- Unique, descriptive title tags and meta descriptions on every page
+- A single H1 per page with a logical H2/H3 structure
+- Descriptive alt text on images, including the hero and team photos
+- Canonical URL and Open Graph tags on the Home, About and Enquire pages
+- Natural use of keywords such as "adopt a dog in Gauteng" in page copy
+- Internal links between pages, including from the Enquire page to Available Dogs
+- Mobile-friendly responsive layout
+- `robots.txt` and `sitemap.xml` in the site root
+  
+### Off-page SEO Strategy
+
+This is a plan for building visibility beyond the site's own code.
+**Backlinks**
+- Update the website link on the organisation's existing listings (Adopt A Pet, the SPCA International shelter list
+and the Facebook page) to point to the live site.
+- Ask local businesses in Midrand and Fourways (vets, pet shops, kennels) to link to the Available Dogs page.
+- Share adoption success stories with local community news outlets, linking to the Happy Tails section.
+  
+**Social Media**
+- Use the existing Facebook page as the main channel, posting each newly available dog with a link to the
+Available Dogs page.
+- Keep the organisation's name, description and website link consistent on every platform.
+- Open Graph tags make shared links show a proper title and description.
+  
+**Local SEO**
+- Create a Google Business Profile for the Midrand shelter and the Fourways community location.
+- Keep the organisation's name, address and phone number identical across the website, directories and social
+profiles.
+- Use location phrases such as "dog adoption in Midrand" naturally in page copy.
+## Performance and Security
+- `loading="lazy"` on the dog and Happy Tails photos so images load as the visitor scrolls; the hero image is
+deliberately not lazy-loaded because it is visible immediately.
+- `rel="noopener noreferrer"` on photo links that open in a new tab.
+- Font domains use `preconnect`, and Leaflet only loads on the Contact page.
+
+- The site has no backend or database. Forms are validated and handled in the browser, so there is no server-
+side input handling to attack. HTTPS is provided by Netlify.
+  
 ## Responsiveness Testing and Iteration Across Devices
 
 ### Mobile
@@ -154,6 +247,14 @@ embedded map on the Contact page, and SEO improvements.
   </tr>
 </table>
 
+## Known Limitations
+- **Forms have no backend.** The enquiry form shows a simulated response and the contact form opens the
+visitor's email app. Nothing is stored or sent automatically.
+- **Illustrative figures.** The costs in the enquiry responses (for example the adoption fee and sponsorship
+amount) are placeholders and would need confirming with the organisation.
+- **Map tiles.** OpenStreetMap's tile servers can refuse requests from pages opened directly from a local file
+(`file://`). The map is intended to be viewed on the deployed site.
+
 ## References
 
 Adopt A Pet, n.d. Paws R Us. [Online]. Available at: https://www.adoptapet.co.za/pet_directory/paws-r-us/
@@ -169,41 +270,12 @@ https://www.instagram.com/pawsrus_sa/
 https://www.facebook.com/PawsRUS.SA/photos/1086218523529108/
 https://pets24.co.za/services/listing/paws-r-us-sa-2/
 Unsplash, n.d. [Search term used]. [Online]. Available at: https://unsplash.com [Accessed on [22/09/2026}
-Leaflet, n.d. Leaflet: an open-source JavaScript library for interactive maps. [Online] Available at: https://leafletjs.com [21/10/2026].
-OpenStreetMap contributors, n.d. OpenStreetMap. [Online] Available at: https://www.openstreetmap.org [22/10/2026].
-Netlify, n.d. Netlify. [Online] Available at: https://www.netlify.com [22/10/2026].
-
-
-## Off-Page SEO Strategy
-
-Off-page SEO covers the signals that build a site's visibility and trust
-beyond its own code. As Paws R Us (SA) is a local non-profit, the plan
-below focuses on low-cost, realistic actions.
-
-### Backlinks
-- Update the website link on the organisation's existing online listings
-  (Adopt A Pet, the SPCA International shelter list, and the Facebook
-  page) to point to the live site.
-- Ask local businesses in Midrand and Fourways (vet clinics, pet shops,
-  kennels) to link to the Available Dogs page.
-- Share adoption success stories with local community news outlets,
-  linking back to the Happy Tails section.
-
-### Social Media
-- Use the existing Facebook page as the main promotion channel, posting
-  each newly available dog with a link to the Available Dogs page.
-- Keep the organisation's name, description and website link consistent
-  across every platform.
-- Open Graph tags (added to the Home, About and Enquire pages) make
-  shared links display a proper title and description.
-
-### Local SEO
-- Create a Google Business Profile for the Midrand shelter and the
-  Fourways community location.
-- Keep the organisation's name, address and phone number identical across
-  the website, directories and social profiles.
-- Use location phrases such as "dog adoption in Midrand" and "dog rescue
-  in Fourways" naturally in page copy.
-- The Contact page map shows both locations
+Leaflet, n.d. Leaflet: an open-source JavaScript library for interactive maps. [Online] Available at: https://leafletjs.com [23/10/2026].
+OpenStreetMap contributors, n.d. OpenStreetMap. [Online] Available at: https://www.openstreetmap.org [27/10/2026].
+Netlify, n.d. Netlify. [Online] Available at: https://www.netlify.com [27/10/2026].
+Paws R Us (SA), n.d. Facebook Page. [Online]. Available at: https://www.facebook.com/PawsRUS.SA/. [Accessed
+on [28/10/2026].
+Sitemaps.org, n.d. Sitemap Protocol. [Online]. Available at: https://www.sitemaps.org/protocol.html. [Accessed on
+[27/10/2026].
 
 
