@@ -4,6 +4,79 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 # PART 3
+## [3.7] - [31/10/2026]
+### Added
+- `CHANGELOG.md` as a separate file, with dated version entries grouped under
+Added, Changed and Fixed (previously the changelog sat inside the README)
+- README sections for goals and KPIs, target audience, features, technical
+implementation, content strategy, SEO (on-page and off-page strategy),
+performance and security, known limitations and a "Working through
+Feedback from Part 2" section
+### Changed
+- Updated the README reference list to include Leaflet, OpenStreetMap,
+Netlify, Google lazy-loading guidance and Sitemaps.org
+- Updated the responsiveness screenshots section to use the images in the
+`responsiveness/` folder
+## [3.6] - [30/10/2026]
+### Added
+- `loading="lazy"` on the six dog photos and three Happy Tails photos in
+`services.html`, so images load as the visitor scrolls
+### Changed
+- Photo links in `services.html` now use `rel="noopener noreferrer"` instead
+of `rel="noopener"`
+- The homepage hero image was deliberately left without lazy loading because
+it is visible as soon as the page opens
+## [3.5] - [28/10/2026]
+### Added
+- Canonical URL and Open Graph tags (`og:title`, `og:description`,
+`og:type`, `og:url`) on `index.html`, `about.html` and `enquiry.html`
+- Internal link from the Enquire page intro to the Available Dogs page
+### Changed
+- Homepage hero copy now includes the phrase "adopt a dog in Gauteng"
+
+- Alt text for the hero and team photos is now more descriptive
+## [3.4] - [27/10/2026]
+### Added
+- `robots.txt` allowing all crawlers and pointing to the sitemap
+- `sitemap.xml` listing all five pages with `lastmod`, `changefreq` and
+`priority` values
+- Deployment to Netlify at https://paws-r-us-sa.netlify.app (renamed from the
+automatically generated site name)
+### Changed
+- Replaced the placeholder domain in `robots.txt` and `sitemap.xml` with the
+live Netlify URL
+## [3.3] - [23/10/2026]
+### Added
+- Interactive Leaflet map on `contact.html` with a marker and popup for each
+location (Midrand shelter and Fourways community area)
+- Leaflet 1.9.4 CSS and JavaScript loaded from unpkg with integrity hashes,
+on the Contact page only
+- Map styling (`.locations-map`): 400px high on desktop, 300px on mobile
+### Changed
+- Replaced the "map to be embedded in Part 3" placeholder with the map
+- The map code runs only when the map container exists and Leaflet has
+loaded, so a failed library load does not break the rest of the page
+### Known issue
+- OpenStreetMap tile servers can refuse requests from pages opened directly
+from a local file; the map is intended to be viewed on the deployed site
+## [3.2] - [22/10/2026]
+### Added
+- JavaScript validation for the Enquiry and Contact forms: name length,
+email format, South African phone format (enquiry form), dropdown
+selection and minimum message length
+- Inline error messages under each field and a highlighted border on invalid
+fields
+- Enquiry form response tailored to the selected enquiry type (adopt,
+foster, volunteer, sponsor), covering cost and next steps
+- Contact form response with a "Send Email" button that opens a pre-filled
+`mailto:` link (recipient, subject and message body)
+
+- Form submission handled in JavaScript with `event.preventDefault()`, so
+the page does not reload
+- `aria-live` regions so screen readers announce the response
+### Changed
+- Added `novalidate` to both forms so the custom messages show instead of
+the browser's default pop-ups
 - ## [3.1] - [20/10/2026]
 
 ### Added
