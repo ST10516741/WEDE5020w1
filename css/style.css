@@ -947,3 +947,32 @@ p {
   .locations-map {
     height: 300px;
   }
+
+/* ---------- Filter buttons: oval pills to match "Adopt Me" ---------- */
+.filter-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--color-plum);
+  border: 2px solid var(--color-pink);
+  border-radius: 999px;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  background-color: var(--color-blush);
+  border-color: var(--color-hotpink);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background-color: var(--color-hotpink);
+  border-color: var(--color-hotpink);
+  color: #fff;
+}
